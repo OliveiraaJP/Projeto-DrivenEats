@@ -37,3 +37,23 @@ function escolharefri() {
 }
 
 //-----------------------------//
+
+function escolhabolo() {
+    document.getElementById("bolo").style.borderColor = "green";
+    document.getElementById("gelatina").style.borderColor = "white";
+    document.getElementById("frutas").style.borderColor = "white";
+}
+
+function escolhagelatina() {
+    document.getElementById("gelatina").style.borderColor = "green";
+    document.getElementById("bolo").style.borderColor = "white";
+    document.getElementById("frutas").style.borderColor = "white";
+}
+
+function escolhafrutas() {
+    document.getElementById("frutas").style.borderColor = "green";
+    document.getElementById("bolo").style.borderColor = "white";
+    document.getElementById("gelatina").style.borderColor = "white";
+}
+
+//-----------------------------//
