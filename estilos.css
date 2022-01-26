@@ -1,0 +1,109 @@
+* {
+box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #EEEEEE;
+    overflow-x: scroll;
+}
+
+/* -- header --  */
+header{
+    background-color: #CF2B2B;
+    color: white;
+    height: 92px;
+    width: 100vh;
+    position: relative;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    box-shadow: 0px 4px 4px 0px #00000040;
+
+}
+
+header h1{
+    font-size: 44px;
+    font-weight: 400;
+
+    position: absolute;
+    top: 12px;
+    left: 15px;
+}
+
+header p {
+    font-size: 18px;
+    font-weight: 400;
+    
+    position: absolute;
+    top: 55px;
+    left: 15px;
+
+}
+
+
+/* --conteudo-- */
+main{
+    margin-top: 127px;
+    margin-left: 15px;
+}
+
+.menu{
+    
+
+}
+
+.menu h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: #333333;
+
+}
+
+.menu__card{
+    height: 216px;
+    width: 172px;
+    background-color: turquoise;
+
+    box-shadow: 0px 0px 10px -4px #00000040;
+    margin-top: 0.8rem;
+    display: flex;
+}
+
+
+
+
+/* --footer-- */
+
+footer{
+    height: 92px;
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    
+    position: relative;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+}
+
+footer div{
+    width: 364px;
+    height: 61px;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 18px;
+    
+
+    background-color: #CBCBCB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: white;
+    line-height: 23px;
+    font-size: 20px;
+}
