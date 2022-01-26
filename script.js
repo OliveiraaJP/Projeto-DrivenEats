@@ -16,3 +16,24 @@ function escolhatorrada() {
     document.getElementById("miojo").style.borderColor = "white";
 }
 
+//--------------------------//
+
+function escolhaagua() {
+    document.getElementById("agua").style.borderColor = "green";
+    document.getElementById("cerveja").style.borderColor = "white";
+    document.getElementById("refri").style.borderColor = "white";
+}
+
+function escolhacerveja() {
+    document.getElementById("cerveja").style.borderColor = "green";
+    document.getElementById("agua").style.borderColor = "white";
+    document.getElementById("refri").style.borderColor = "white";
+}
+
+function escolharefri() {
+    document.getElementById("refri").style.borderColor = "green";
+    document.getElementById("agua").style.borderColor = "white";
+    document.getElementById("cerveja").style.borderColor = "white";
+}
+
+//-----------------------------//
