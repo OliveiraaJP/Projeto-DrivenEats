@@ -23,80 +23,91 @@
 
     <main>
         <h2>Primeiro, seu prato</h2>
-        <div class="menu">
-            <div class="menu__card" onclick="escolhamiojo()" id="miojo">
+        <div class="menu pratos">
+            <div class="menu__card miojo" onclick="escolherPrato('.miojo', 'Miojo')" id="miojo">
                 <img src="img/miojo.jpg" alt="miojo">
                 <strong>Miojo Cru</strong>
                 <small>servido a moda da casa</small>
                 <p>R$ 14,90</p>
+                <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
             </div>
-            <div class="menu__card" onclick="escolhatofu()" id="tofu">
+            <div class="menu__card tofu" onclick="escolherPrato('.tofu', 'Tofu')" id="tofu">
                 <img src="img/tofu.jpg" alt="tofu">
                 <strong>Tofu</strong>
                 <small>servido a moda da casa</small>
                 <p>R$ 14,90</p>
+                <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
             </div>
-            <div class="menu__card" onclick="escolhatorrada()" id="torrada">
+            <div class="menu__card torrada" onclick="escolherPrato('.torrada', 'Torrada')" id="torrada">
                 <img src="img/torrada.jpg" alt="torrada">
                 <strong>Torrada</strong>
                 <small>servido a moda da casa</small>
                 <p>R$ 14,90</p>
+                <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
             </div>
         </div>
 
         <h2>Agora, sua bebida</h2>
-        <div class="menu">
-            <div class="menu__card" onclick="escolhaagua()" id="agua">
+        <div class="menu bebidas">
+            <div class="menu__card agua" onclick="escolherBebida('.agua', 'Agua')" id="agua">
                 <img src="img/agua.jpg" alt="agua">
                 <strong>Água</strong>
                 <small>água da casa</small>
                 <p>R$ 14,90</p>
+                <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
             </div>
-            <div class="menu__card" onclick="escolhacerveja()" id="cerveja">
+            <div class="menu__card cerveja" onclick="escolherBebida('.cerveja', 'Cerveja')" id="cerveja">
                 <img src="img/cerveja.jpg" alt="cerveja">
                 <strong>Cerveja Glacial</strong>
                 <small>latão de glacial</small>
                 <p>R$ 14,90</p>
+                <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
             </div>
-            <div class="menu__card" onclick="escolharefri()" id="refri">
+            <div class="menu__card refri" onclick="escolherBebida('.refri', 'Refri')" id="refri">
                 <img src="img/refri.jpg" alt="refrigerante">
                 <strong>Pepsi</strong>
                 <small>Geladinha delícia</small>
                 <p>R$ 14,90</p>
+                <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
             </div>
         </div>
-        
+
         <h2>Por fim, sua sobremesa</h2>
-        <div class="menu">
-            <div class="menu__card" onclick="escolhabolo()" id="bolo">
+        <div class="menu sobremesas">
+            <div class="menu__card bolo" onclick="escolherSobremesa('.bolo', 'Bolo')" id="bolo">
                 <img src="img/bolo.jpg" alt="bolo">
                 <strong>Bolo de pote</strong>
                 <small>300g de bolo gostoso</small>
                 <p>R$ 14,90</p>
+                <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
             </div>
-            <div class="menu__card" onclick="escolhagelatina()" id="gelatina">
+            <div class="menu__card gelatina" onclick="escolherSobremesa('.gelatina', 'Gelatina')" id="gelatina">
                 <img src="img/gelatina.jpg" alt="gelatina">
                 <strong>Gelatina</strong>
                 <small>Todas as cores disponíveis</small>
                 <p>R$ 14,90</p>
+                <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
             </div>
-            <div class="menu__card" onclick="escolhafrutas()" id="frutas">
+            <div class="menu__card frutas" onclick="escolherSobremesa('.frutas', 'Frutas')" id="frutas">
                 <img src="img/salada-de-frutas.jpg" alt="salada de frutas">
                 <strong>Salada de Frutas</strong>
                 <small>Opção saudável</small>
                 <p>R$ 14,90</p>
+                <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>                                                                                                     
             </div>
         </div>
 
-        
+
 
     </main>
 
     <footer>
-        <div> Selecione os 3 itens </br> para fechar seu pedido</div>
+        <div class="avancar" onclick="avancarPedido()"> Selecione os 3 itens </br> para fechar seu pedido</div>
     </footer>
 
     <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
