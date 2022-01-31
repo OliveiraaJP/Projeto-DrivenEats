@@ -107,6 +107,11 @@ h2{
     right: 12px;
     bottom: 16px;
     font-size: 22px;
+    display: none;
+}
+
+.iconeSelecionado{
+    display: block;
 }
 
 /* .menu__card-sombra{
@@ -210,7 +215,7 @@ footer div{
 
 .caixaConfirmacao-header{
 height: 25%;
-font-size: 1rem;
+font-size: 1.3rem;
 font-weight: 700;
 color: #FFFFFF;
 
@@ -222,7 +227,7 @@ justify-content: center;
 .caixaConfirmacao-main{
 height: 50%;
 font-weight: 400;
-font-size: 1rem;
+font-size: 1.3rem;
 color: #FFFFFF;
 
 display: flex;
@@ -231,10 +236,44 @@ justify-content: space-around;
 flex-direction: column;
 }
 
+.caixaConfirmacao-main-prato,
+.caixaConfirmacao-main-bebida,
+.caixaConfirmacao-main-sobremesa,
+.caixaConfirmacao-main-total{
+    height: 25%;
+    width: 100%;
+    padding-left: 27px;
+    position: relative;
+    display: flex;
+    
+}
+.caixaConfirmacao-main-prato-esquerda,
+.caixaConfirmacao-main-bebida-esquerda,
+.caixaConfirmacao-main-sobremesa-esquerda,
+.caixaConfirmacao-main-total-esquerda
+{
+    justify-content: flex-start;
+    width: 50%;
+}
+.caixaConfirmacao-main-prato-direita,
+.caixaConfirmacao-main-bebida-direita,
+.caixaConfirmacao-main-sobremesa-direita,
+.caixaConfirmacao-main-total-direita
+{
+    display: flex;
+    padding-right: 25px;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.caixaConfirmacao-main-total{
+    font-weight: 700;
+}
+
 .caixaConfirmacao-footer{
 height: 25%;
 font-weight: 700;
-font-size: 1rem;
+font-size: 1.3rem;
 color: #FFFFFF;
 
 display: flex;

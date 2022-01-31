@@ -30,7 +30,7 @@
                 <strong>Miojo Cru</strong>
                 <small>servido a moda da casa</small>
                 <p>R$ 4,90</p>
-                <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
+                <ion-icon name="checkmark-circle" class="menu__card-checked"></ion-icon>
             </div>
             <div class="menu__card tofu" onclick="escolherPrato('.tofu', 'Tofu', '3.90')" id="tofu">
                 <img src="img/tofu.jpg" alt="tofu">
@@ -111,17 +111,31 @@
 
         </div>
     </footer>
-    <div class="backgroundConfirmacao escondido">
+    <div class="backgroundConfirmacao">
         <div class="caixaConfirmacao">
             <div class="caixaConfirmacao-header">Confirme o pedido
             </div>
 
             <div class="caixaConfirmacao-main">
-                <span>comida preco</span>
-                <span>bebida preco</span>
-                <span>sobremesa preco</span>
-                <span>total preco</span>
-                
+                <div class="caixaConfirmacao-main-prato">
+                    <span class="caixaConfirmacao-main-prato-esquerda">prato</span>
+                    <span class="caixaConfirmacao-main-prato-direita">valor</span>
+                </div>
+
+                <div class="caixaConfirmacao-main-bebida">
+                    <span class="caixaConfirmacao-main-bebida-esquerda">bebida</span>
+                    <span class="caixaConfirmacao-main-bebida-direita">valor</span>
+                </div>
+
+                <div class="caixaConfirmacao-main-sobremesa">
+                    <span class="caixaConfirmacao-main-sobremesa-esquerda">sobremesa</span>
+                    <span class="caixaConfirmacao-main-sobremesa-direita">valor</span>
+                </div>
+
+                <div class="caixaConfirmacao-main-total">
+                    <span class="caixaConfirmacao-main-total-esquerda">TOTAL</span>
+                    <span class="caixaConfirmacao-main-total-direita">valor</span>
+                </div>
             </div>
 
             <div class="caixaConfirmacao-footer">
