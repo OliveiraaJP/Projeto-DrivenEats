@@ -3,6 +3,7 @@ box-sizing: border-box;
 
 }
 
+
 body{
     font-family: 'Roboto', sans-serif;
     background-color: #EEEEEE;
@@ -75,9 +76,10 @@ img{
 }
 
 h2{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Righteous', cursive;
+    font-style: normal;
     font-size: 26px;
-    font-weight: 400;
+    /* font-weight: 400; */
     color: #333333;
     height: 25px;
     
