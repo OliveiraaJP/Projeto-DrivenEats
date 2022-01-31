@@ -13,9 +13,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -26,81 +26,95 @@
     </header>
 
     <main>
-        <h2>Primeiro, seu prato</h2>
-        <div class="menu pratos" data-identifier="dishes">
-            <div class="menu__card miojo" onclick="escolherPrato('.miojo', 'Miojo', '4.90')" data-identifier="food-option">
-                <img src="img/miojo.jpg" alt="miojo">
-                <strong data-identifier="food-title">Miojo Cru</strong>
-                <small>servido a moda da casa</small>
-                <p data-identifier="food-price">R$ 4,90</p>
-                <ion-icon name="checkmark-circle" class="menu__card-checked"></ion-icon>
+        <div data-identifier="dishes">
+            <h2>Primeiro, seu prato</h2>
+            <div class="menu pratos">
+                <div class="menu__card miojo" onclick="escolherPrato('.miojo', 'Miojo', '4.90')"
+                    data-identifier="food-option">
+                    <img src="img/miojo.jpg" alt="miojo">
+                    <strong data-identifier="food-title">Miojo Cru</strong>
+                    <small>servido a moda da casa</small>
+                    <p data-identifier="food-price">R$ 4,90</p>
+                    <ion-icon name="checkmark-circle" class="menu__card-checked"></ion-icon>
+                </div>
+                <div class="menu__card tofu" onclick="escolherPrato('.tofu', 'Tofu', '3.90')"
+                    data-identifier="food-option">
+                    <img src="img/tofu.jpg" alt="tofu">
+                    <strong data-identifier="food-title">Tofu</strong>
+                    <small>servido a moda da casa</small>
+                    <p data-identifier="food-price">R$ 3,90</p>
+                    <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
+                </div>
+                <div class="menu__card torrada" onclick="escolherPrato('.torrada', 'Torrada', '5.90')"
+                    data-identifier="food-option">
+                    <img src="img/torrada.jpg" alt="torrada">
+                    <strong data-identifier="food-title">Torrada</strong>
+                    <small>servido a moda da casa</small>
+                    <p data-identifier="food-price">R$ 5,90</p>
+                    <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
+                </div>
             </div>
-            <div class="menu__card tofu" onclick="escolherPrato('.tofu', 'Tofu', '3.90')" data-identifier="food-option">
-                <img src="img/tofu.jpg" alt="tofu">
-                <strong data-identifier="food-title">Tofu</strong>
-                <small>servido a moda da casa</small>
-                <p data-identifier="food-price">R$ 3,90</p>
-                <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
-            </div>
-            <div class="menu__card torrada" onclick="escolherPrato('.torrada', 'Torrada', '5.90')" data-identifier="food-option">
-                <img src="img/torrada.jpg" alt="torrada">
-                <strong data-identifier="food-title">Torrada</strong>
-                <small>servido a moda da casa</small>
-                <p data-identifier="food-price">R$ 5,90</p>
-                <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
+        </div>
+        
+        <div data-identifier="drinks">
+            <h2>Agora, sua bebida</h2>
+            <div class="menu bebidas">
+                <div class="menu__card agua" onclick="escolherBebida('.agua', 'Agua', '2.00')"
+                    data-identifier="food-option">
+                    <img src="img/agua.jpg" alt="agua">
+                    <strong data-identifier="food-title">Água</strong>
+                    <small>água da casa</small>
+                    <p data-identifier="food-price">R$ 2,00</p>
+                    <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
+                </div>
+                <div class="menu__card cerveja" onclick="escolherBebida('.cerveja', 'Cerveja', '4.90')"
+                    data-identifier="food-option">
+                    <img src="img/cerveja.jpg" alt="cerveja">
+                    <strong data-identifier="food-title">Cerveja Glacial</strong>
+                    <small>latão de glacial</small>
+                    <p data-identifier="food-price">R$ 4,90</p>
+                    <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
+                </div>
+                <div class="menu__card refri" onclick="escolherBebida('.refri', 'Refrigerante', '5.90')"
+                    data-identifier="food-option">
+                    <img src="img/refri.jpg" alt="refrigerante">
+                    <strong data-identifier="food-title">Pepsi</strong>
+                    <small>Geladinha delícia</small>
+                    <p data-identifier="food-price">R$ 5,90</p>
+                    <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
+                </div>
             </div>
         </div>
 
-        <h2>Agora, sua bebida</h2>
-        <div class="menu bebidas" data-identifier="drinks">
-            <div class="menu__card agua" onclick="escolherBebida('.agua', 'Agua', '2.00')" data-identifier="food-option">
-                <img src="img/agua.jpg" alt="agua">
-                <strong data-identifier="food-title">Água</strong>
-                <small>água da casa</small>
-                <p data-identifier="food-price">R$ 2,00</p>
-                <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
-            </div>
-            <div class="menu__card cerveja" onclick="escolherBebida('.cerveja', 'Cerveja', '4.90')" data-identifier="food-option">
-                <img src="img/cerveja.jpg" alt="cerveja">
-                <strong data-identifier="food-title">Cerveja Glacial</strong>
-                <small>latão de glacial</small>
-                <p data-identifier="food-price">R$ 4,90</p>
-                <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
-            </div>
-            <div class="menu__card refri" onclick="escolherBebida('.refri', 'Refrigerante', '5.90')" data-identifier="food-option">
-                <img src="img/refri.jpg" alt="refrigerante">
-                <strong data-identifier="food-title">Pepsi</strong>
-                <small>Geladinha delícia</small>
-                <p data-identifier="food-price">R$ 5,90</p>
-                <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
-            </div>
-        </div>
-
-        <h2>Por fim, sua sobremesa</h2>
-        <div class="menu sobremesas" data-identifier="desserts">
-            <div class="menu__card bolo" onclick="escolherSobremesa('.bolo', 'Bolo', '10.90')" data-identifier="food-option">
-                <img src="img/bolo.jpg" alt="bolo">
-                <strong data-identifier="food-title">Bolo de pote</strong>
-                <small>300g de bolo gostoso</small>
-                <p data-identifier="food-price">R$ 10,90</p>
-                <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
-            </div>
-            <div class="menu__card gelatina" onclick="escolherSobremesa('.gelatina', 'Gelatina', '3.90')" data-identifier="food-option">
-                <img src="img/gelatina.jpg" alt="gelatina">
-                <strong data-identifier="food-title">Gelatina</strong>
-                <small>Todas as cores disponíveis</small>
-                <p data-identifier="food-price">R$ 3,90</p>
-                <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
-            </div>
-            <div class="menu__card frutas" onclick="escolherSobremesa('.frutas', 'Frutas', '4.90')" data-identifier="food-option">
-                <img src="img/salada-de-frutas.jpg" alt="salada de frutas">
-                <strong data-identifier="food-title">Salada de Frutas</strong>
-                <small>Opção saudável</small>
-                <p data-identifier="food-price">R$ 4,90</p>
-                <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
+        <div data-identifier="desserts">
+            <h2>Por fim, sua sobremesa</h2>
+            <div class="menu sobremesas">
+                <div class="menu__card bolo" onclick="escolherSobremesa('.bolo', 'Bolo', '10.90')"
+                    data-identifier="food-option">
+                    <img src="img/bolo.jpg" alt="bolo">
+                    <strong data-identifier="food-title">Bolo de pote</strong>
+                    <small>300g de bolo gostoso</small>
+                    <p data-identifier="food-price">R$ 10,90</p>
+                    <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
+                </div>
+                <div class="menu__card gelatina" onclick="escolherSobremesa('.gelatina', 'Gelatina', '3.90')"
+                    data-identifier="food-option">
+                    <img src="img/gelatina.jpg" alt="gelatina">
+                    <strong data-identifier="food-title">Gelatina</strong>
+                    <small>Todas as cores disponíveis</small>
+                    <p data-identifier="food-price">R$ 3,90</p>
+                    <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
+                </div>
+                <div class="menu__card frutas" onclick="escolherSobremesa('.frutas', 'Frutas', '4.90')"
+                    data-identifier="food-option">
+                    <img src="img/salada-de-frutas.jpg" alt="salada de frutas">
+                    <strong data-identifier="food-title">Salada de Frutas</strong>
+                    <small>Opção saudável</small>
+                    <p data-identifier="food-price">R$ 4,90</p>
+                    <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
+                </div>
             </div>
         </div>
-
 
 
     </main>
@@ -148,7 +162,7 @@
                 <div class="caixaConfirmacao-footer-bot" onclick="cancelarPedido()">
                     Cancelar
                 </div>
-                
+
             </div>
 
         </div>
