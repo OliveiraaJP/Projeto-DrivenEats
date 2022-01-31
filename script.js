@@ -2,13 +2,16 @@ let verificarPratos = null;
 let verificarBebidas = null;
 let verificarSobremesas = null;
 
-let precoPrato = 0;
-let precoBebida = 0;
-let precoSobremesa = 0;
+let precoPrato = null;
+let precoBebida = null;
+let precoSobremesa = null;
+let precoTotal = null;
+
+// const btn = document.querySelector(".avancar");
 
 
 
-function escolherPrato(classPrato, nomePrato) {
+function escolherPrato(classPrato, nomePrato, valorPrato) {
     const selecionado = document.querySelector(".pratos .selecionado");
     const selecionadoIcone = document.querySelector(`${classPrato} ion-icon`);
     if (selecionado !== null) {
@@ -21,15 +24,15 @@ function escolherPrato(classPrato, nomePrato) {
 
     const iconeVerde = document.querySelector(`${classPrato} .menu__card-checked`);
     iconeVerde.classList.remove("escondido");
-    verificarPratos = nomePrato
+    verificarPratos = nomePrato;
+    precoPrato = parseFloat(valorPrato);
     liberarPedido();
-
 }
 
 
 //--------------------------//
 
-function escolherBebida(classBebida, nomeBebida) {
+function escolherBebida(classBebida, nomeBebida, valorBebida) {
     const selecionado = document.querySelector(".bebidas .selecionado");
     const selecionadoIcone = document.querySelector(`${classBebida} ion-icon`);
     if (selecionado !== null) {
@@ -44,14 +47,16 @@ function escolherBebida(classBebida, nomeBebida) {
     const iconeVerde = document.querySelector(`${classBebida} .menu__card-checked`);
     iconeVerde.classList.remove("escondido");
 
-    verificarBebidas = nomeBebida
+    verificarBebidas = nomeBebida;
+    precoBebida = parseFloat(valorBebida);
     liberarPedido();
+    
 }
 
 
 //-----------------------------//
 
-function escolherSobremesa(classSobremesa, nomeSobremesa) {
+function escolherSobremesa(classSobremesa, nomeSobremesa, valorSobremesa) {
     const selecionado = document.querySelector(".sobremesas .selecionado");
     const selecionadoIcone = document.querySelector(`${classSobremesa} ion-icon`);
     if (selecionado !== null) {
@@ -67,7 +72,8 @@ function escolherSobremesa(classSobremesa, nomeSobremesa) {
     const iconeVerde = document.querySelector(`${classSobremesa} .menu__card-checked`);
     iconeVerde.classList.remove("escondido");
 
-    verificarSobremesas = nomeSobremesa
+    verificarSobremesas = nomeSobremesa;
+    precoSobremesa = parseFloat(valorSobremesa);
     liberarPedido();
 }
 
@@ -76,13 +82,28 @@ function liberarPedido() {
     if (verificarPratos !== null && verificarBebidas !== null && verificarSobremesas !== null) {
         const botao = document.querySelector(".avancar");
         botao.classList.add('liberado');
-        botao.innerHTML = "Fechar Pedido"
+        botao.innerHTML = 'Fechar Pedido';
+        
     }
 }
 
 function avancarPedido() {
     if ((verificarPratos !== null && verificarBebidas !== null && verificarSobremesas !== null)) {
-        prompt('oi');
+        let nomeEntrega = prompt('Qual seu nome?');
+        let enderecoEntrega = prompt('Qual seu endereço?')
+        
+        precoTotal = precoBebida + precoPrato + precoSobremesa;
+        let valorTotal = precoTotal.toFixed(2);
+        let zapMsg = `Olá, gostaria de fazer o pedido:\n- Prato: ${verificarPratos}\n - Bebida: ${verificarBebidas}\n- Sobremesa: ${verificarSobremesas}\nTotal: R$ ${valorTotal}\n\n- Nome: ${nomeEntrega} \n- Endereço: ${enderecoEntrega}.`;
+        zapMsg = window.encodeURIComponent(zapMsg);        
+        
+        window.open('https://wa.me/5521974636854?text='+zapMsg, '_blank')
     }
+
+   // zapMsgEncode = encodeURIComponent(zapMsg);
 }
+
+// btn.addEventListener('click', () => {
+//     openInNewTab(url)
+// })
 

@@ -59,9 +59,7 @@ main{
     margin-bottom: 115px;
 }
 
-.selecionado{
-    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
-}
+
 
 img{
     width: 144px;
@@ -93,7 +91,7 @@ h2{
     border-radius: 9px;
     /* border: 10px solid white; */
 
-    /* box-shadow: 0px 0px 10px -4px #00000040; */
+    box-shadow: 0px 0px 10px -4px #00000040;
     display: flex;
     flex-direction: column;
     margin-top: 0.8rem;
@@ -111,9 +109,9 @@ h2{
     font-size: 22px;
 }
 
-.menu__card-sombra{
+/* .menu__card-sombra{
     box-shadow: 0px 0px 10px -4px #00000040;
-}
+} */
 
 .menu__card strong {
     font-size: 16px;
@@ -132,12 +130,13 @@ h2{
 
     margin-left: 15px;
     margin-right: 15px;
+    
 }
 
 .menu__card p{
-    margin-left: 15px;
-    margin-top: 0.5rem;
-    font-size: 16px;
+    position: absolute;
+    bottom: 13px;
+    left: 14px;
 }
 
 
@@ -178,4 +177,8 @@ footer div{
 .liberado {
     background-color: #32B72F;
     color: #FFFFFF;
+}
+
+.selecionado{
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
 }
