@@ -16,6 +16,7 @@
 </head>
 
 <body>
+
     <header>
         <h1>DrivenEats</h1>
         <p>Sua comida em 6 minutos</p>
@@ -93,7 +94,7 @@
                 <strong>Salada de Frutas</strong>
                 <small>Opção saudável</small>
                 <p>R$ 4,90</p>
-                <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>                                                                                                     
+                <ion-icon name="checkmark-circle" class="menu__card-checked escondido"></ion-icon>
             </div>
         </div>
 
@@ -101,11 +102,40 @@
 
     </main>
 
+
+
+    </div>
+
     <footer>
         <div class="avancar" onclick="avancarPedido()" defer> Selecione os 3 itens </br> para fechar seu pedido
-        
+
         </div>
     </footer>
+    <div class="backgroundConfirmacao escondido">
+        <div class="caixaConfirmacao">
+            <div class="caixaConfirmacao-header">Confirme o pedido
+            </div>
+
+            <div class="caixaConfirmacao-main">
+                <span>comida preco</span>
+                <span>bebida preco</span>
+                <span>sobremesa preco</span>
+                <span>total preco</span>
+                
+            </div>
+
+            <div class="caixaConfirmacao-footer">
+                <div class="caixaConfirmacao-footer-top" onclick="finalizarPedido()">
+                    Tudo certo, pode pedir!
+                </div>
+                <div class="caixaConfirmacao-footer-bot" onclick="cancelarPedido()">
+                    Cancelar
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
 
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

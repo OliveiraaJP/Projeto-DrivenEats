@@ -39,7 +39,6 @@ function escolherBebida(classBebida, nomeBebida, valorBebida) {
         selecionado.classList.remove("selecionado");
         selecionadoIcone.classList.add("escondido");
     }
-    // document.querySelector(".pratos .menu__card classPrato").style.boxShadow = "none";
 
     const bordaVerde = document.querySelector(classBebida);
     bordaVerde.classList.add("selecionado");
@@ -86,24 +85,29 @@ function liberarPedido() {
         
     }
 }
+function avancarPedido(){
+    const liberar = document.querySelector(".backgroundConfirmacao.escondido");
+    liberar.classList.remove('escondido')
+    
+}
 
-function avancarPedido() {
+function finalizarPedido() {
     if ((verificarPratos !== null && verificarBebidas !== null && verificarSobremesas !== null)) {
         let nomeEntrega = prompt('Qual seu nome?');
         let enderecoEntrega = prompt('Qual seu endereço?')
         
         precoTotal = precoBebida + precoPrato + precoSobremesa;
         let valorTotal = precoTotal.toFixed(2);
-        let zapMsg = `Olá, gostaria de fazer o pedido:\n- Prato: ${verificarPratos}\n - Bebida: ${verificarBebidas}\n- Sobremesa: ${verificarSobremesas}\nTotal: R$ ${valorTotal}\n\n- Nome: ${nomeEntrega} \n- Endereço: ${enderecoEntrega}.`;
+        let zapMsg = `Olá, gostaria de fazer o pedido:\n- Prato: ${verificarPratos}\n- Bebida: ${verificarBebidas}\n- Sobremesa: ${verificarSobremesas}\nTotal: R$ ${valorTotal}\n\n- Nome: ${nomeEntrega} \n- Endereço: ${enderecoEntrega}.`;
         zapMsg = window.encodeURIComponent(zapMsg);        
         
         window.open('https://wa.me/5521974636854?text='+zapMsg, '_blank')
     }
-
-   // zapMsgEncode = encodeURIComponent(zapMsg);
 }
 
-// btn.addEventListener('click', () => {
-//     openInNewTab(url)
-// })
+function cancelarPedido(){
+    const liberar = document.querySelector(".backgroundConfirmacao");
+    liberar.classList.add('escondido')
+}
+
 
